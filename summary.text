@@ -1,2 +1,51 @@
+
+****************** Variables ************
+
+A variable is a container used to store data values.
+Ex => let name = "Azim";
+
+Ways to Declare Variables
+
+1) var (❌ Avoid in modern JS)
+var x = 10;
+ - Function scoped
+ - Can be redeclared
+ - Hoisted with undefined
+ - Causes bugs → not recommended
+
+2) let (✅ Use this normally)
+let age = 25;
+ - Block scoped
+ - Can be updated
+ - Cannot be redeclared in same scope
+
+3) const (✅ Preferred when value is fixed)
+const pi = 3.14;
+ - Block scoped
+ - Cannot be updated or redeclared
+ - Must assign value at declaration
+
+| Feature   | var      | let       | const     |
+| --------- | -------- | --------- | --------- |
+| Scope     | Function | Block     | Block     |
+| Redeclare | ✅ Yes   | ❌ No      | ❌ No      |
+| Reassign  | ✅ Yes   | ✅ Yes     | ❌ No      |
+| Hoisting  | ✅ Yes   | ✅ Yes (TDZ)| Yes (TDZ) |
+
+******************* Hoisting *******************
+variables are moved to the top of scope during execution.
+
+console.log(x); // undefined
+var x = 5;
+
+But with let and const:
+
+console.log(x); // ❌ Error
+let x = 5;
+
+“In modern JavaScript, we use let and const instead of var due to block scoping and better control over reassignment.”
+
+👉 typeof null returns "object" (this is a famous JS bug)
+
 // Template literals → `My name is ${name}`
 // + → (concatenation)

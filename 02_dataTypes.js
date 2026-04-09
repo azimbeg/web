@@ -1,10 +1,10 @@
 "use strict";
 
-let name = "Azim"
-let age = 18
-let isLoggedIn = false
+// let name = "Azim"
+// let age = 18
+// let isLoggedIn = false
 
-console.log(typeof age)
+// console.log(typeof age)
 
 // number 
 // BigInt
@@ -15,6 +15,18 @@ console.log(typeof age)
 // Symbol => unique 
 
 // Object
+
+
+// practice 
+
+const num = 1
+const email = "azim@gamil.com" 
+let isLoggedIn = true
+
+console.log(typeof num)
+console.log(typeof email);
+console.log(typeof isLoggedIn)
+
 
 
 
