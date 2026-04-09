@@ -152,11 +152,26 @@ Array.isArray([1,2,3]) // true
 
 👉 "JavaScript has 7 primitive data types and non-primitive types like objects, arrays, and functions which are reference types."
 
+******************* Stack vs Heap Memory ******************
 
+👉 "Primitive types are stored in stack memory and copied by value, while non-primitive types are stored in heap memory and accessed via reference, so changes affect all references."
 
+👉 Stack = value copy | Heap = reference copy
 
+Ex 1 >
+ 
+let a = 10;
+let b = a;
+b = 20;
+console.log(a); // 10
+console.log(b); // 20
 
+Ex 2 > 
 
+let arr1 = [1, 2];
+let arr2 = arr1;
+arr2.push(3);
+console.log(arr1); // [1, 2, 3]
 
 // Template literals → `My name is ${name}`
 // + → (concatenation)
