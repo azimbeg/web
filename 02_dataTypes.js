@@ -19,13 +19,13 @@
 
 // practice 
 
-const num = 1
-const email = "azim@gamil.com" 
-let isLoggedIn = true
+// const num = 1
+// const email = "azim@gamil.com" 
+// let isLoggedIn = true
 
-console.log(typeof num)
-console.log(typeof email);
-console.log(typeof isLoggedIn)
+// console.log(typeof num)
+// console.log(typeof email);
+// console.log(typeof isLoggedIn)
 
 
 

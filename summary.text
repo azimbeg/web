@@ -47,5 +47,116 @@ let x = 5;
 
 👉 typeof null returns "object" (this is a famous JS bug)
 
+typeof null // "object"
+❗ Why?
+This is a historical bug from early JavaScript (1995)
+Internally, JavaScript stored values in a way that made null look like an object
+It was never fixed because it would break existing code
+🔹 Important Points
+null is actually a primitive value, NOT an object
+But typeof incorrectly returns "object"
+🔹 Interview One-Liner ⭐
+
+👉 "typeof null returns 'object' due to a legacy bug in JavaScript, even though null is a primitive value."
+
+🔹 How to Properly Check for null
+let x = null;
+
+x === null // ✅ true
+🔹 Bonus Trick Question
+null == undefined  // true
+null === undefined // false
+
+👉 Because:
+
+== → loose equality (type conversion)
+=== → strict equality (no conversion)
+
+
+
+***************** DATA TYPE ********************
+✅ Definition
+Data types define the type of value a variable can hold.
+
+🔹 Two Main Categories
+1. Primitive Data Types (Immutable)
+
+👉 Stored by value
+
+Number
+String
+Boolean
+Undefined
+Null
+BigInt
+Symbol
+
+🔸 Examples
+let num = 10;              // Number
+let name = "Azim";         // String
+let isLogin = true;        // Boolean
+let x;                     // Undefined
+let y = null;              // Null
+let big = 123456789n;      // BigInt
+let sym = Symbol("id");    // Symbol
+
+🔹 Important Primitive Notes
+✅ undefined
+Variable declared but not assigned
+let a;
+console.log(a); // undefined
+✅ null
+Intentional empty value
+let b = null;
+✅ BigInt
+For very large numbers
+let big = 12345678901234567890n;
+✅ Symbol
+Unique identifiers (used in advanced JS)
+🔹 Non-Primitive (Reference Type)
+
+👉 Stored by reference
+
+Object
+Array
+Function
+🔸 Examples
+let obj = { name: "Azim" };   // Object
+let arr = [1, 2, 3];          // Array
+function greet() {}           // Function
+🔹 Key Difference
+Feature	Primitive	Non-Primitive
+Storage	By value	By reference
+Mutable	❌ No	✅ Yes
+Example	Number, String	Object, Array
+🔹 typeof Operator
+typeof 10           // "number"
+typeof "hello"      // "string"
+typeof true         // "boolean"
+typeof undefined    // "undefined"
+typeof null         // "object" ❗ bug
+typeof {}           // "object"
+typeof []           // "object"
+typeof function(){} // "function"
+🔹 Interview Tricky Points ⭐
+typeof null → "object" (bug)
+typeof [] → "object"
+
+Functions are also objects but:
+
+typeof function(){} // "function"
+🔹 Best Practice
+Use Array.isArray() to check array
+Array.isArray([1,2,3]) // true
+🔹 One-Line Interview Answer ⭐
+
+👉 "JavaScript has 7 primitive data types and non-primitive types like objects, arrays, and functions which are reference types."
+
+
+
+
+
+
+
 // Template literals → `My name is ${name}`
 // + → (concatenation)
