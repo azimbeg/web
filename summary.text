@@ -173,5 +173,89 @@ let arr2 = arr1;
 arr2.push(3);
 console.log(arr1); // [1, 2, 3]
 
+******************* string ***********************
+"Strings in JavaScript are immutable sequences of characters
+
+ and modern JS uses template literals for dynamic string creation."
 // Template literals → `My name is ${name}`
 // + → (concatenation)
+
+
+✅ 1. length
+👉 Returns number of characters
+"hello".length // 5
+
+.length is a property, not a function
+❌ Wrong: str.length()
+✅ Correct: str.length
+
+✅ 2. toUpperCase() / toLowerCase()
+"hello".toUpperCase() // "HELLO"
+"HELLO".toLowerCase() // "hello"
+
+✅ 3. trim()
+👉 Removes spaces from start & end
+"  hi  ".trim() // "hi"
+str.trimStart() // removes only starting spaces
+str.trimEnd()   // removes only ending spaces
+
+✅ 4. slice(start, end)
+👉 Extracts part of string
+"JavaScript".slice(0, 4) // "Java"
+
+✅ 5. substring(start, end)
+👉 Similar to slice (no negative index)
+"JavaScript".substring(0, 4) // "Java"
+
+✅ 6. replace()
+"hello".replace("h", "y") // "yello"
+replace() replaces only first match
+
+✅ 7. replaceAll()
+"hi hi".replaceAll("hi", "bye") // "bye bye"
+
+✅ 8. includes()
+👉 Checks if value exists
+"hello".includes("he") // true
+
+includes() is case-sensitive
+str.includes("react") // ❌ false
+You can make it case-insensitive:
+str.toLowerCase().includes("react") // ✅ true
+
+✅ 9. startsWith() / endsWith()
+"hello".startsWith("he") // true
+"hello".endsWith("lo")   // true
+
+✅ 10. split()
+👉 Converts string → array
+"a,b,c".split(",") // ["a","b","c"]
+split(separator)
+"," → split by comma
+" " → split by space
+
+✅ 11. concat()
+"Hello".concat(" ", "World") // "Hello World"
+
+👉 Prefer + or template literals instead
+
+✅ 12. charAt()
+"hello".charAt(1) // "e"
+
+🔹 Important Differences (Interview ⭐)
+🔸 slice vs substring
+slice() supports negative index ✅
+substring() does NOT ❌
+
+🔹 Tricky Interview Questions
+"5" + 2   // "52"
+"5" - 2   // 3
+
+👉 Because:
++ → concatenation
+- → numeric operation
+🔹 One-Line Summary ⭐
+
+👉 "JavaScript string methods are used to manipulate and extract text, and since strings are immutable, all methods return new strings."
+
+
